@@ -6,8 +6,8 @@ const jobsSlice = createSlice({
     jobs: []
   },
   reducers: {
-    addJob: (state, params) => {
-      const {payload} = params;
+    addJob: (state, job) => {
+      const {payload} = job;
       state.jobs = [...state.jobs, payload];
     }
   }

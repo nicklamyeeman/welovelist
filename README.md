@@ -1,5 +1,5 @@
 # welovelist
-Technical test for job application at welovedev
+Technical test for job application at welovedevs
 
 # Getting Started with Create React App
 
