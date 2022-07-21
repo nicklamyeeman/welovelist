@@ -4,7 +4,6 @@ import JobCard from "../../Card/Job/JobCard";
 
 const JobsList = () => {
   const { jobs } = useSelector(state => state.jobs);
-  console.log(jobs);
 
   return (
     <div className="container mx-auto p-4">
