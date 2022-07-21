@@ -8,7 +8,7 @@ const WelcomeView = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="text-center">
       <WelcomeTitleText/>
       <div className="grid grid-cols-2">
         <VisitorTypeButton

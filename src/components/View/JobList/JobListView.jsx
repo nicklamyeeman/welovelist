@@ -1,12 +1,12 @@
-import { useSelector } from "react-redux";
+import ListHeader from "../../Header/List/ListHeader";
+import JobsList from "../../List/Jobs/JobsList";
 
 const JobListView = () => {
-  const {visitor} = useSelector(state => state.visitor);
 
   return (
-    <div>
-      <h1>JobListView</h1>
-      {visitor}
+    <div className="grid grid-cols-1 divide-y-2 text-center container mx-auto bg-slate-100">
+      <ListHeader/>
+      <JobsList/>
     </div>
   );
 }
