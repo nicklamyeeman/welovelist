@@ -15,7 +15,7 @@ const AppView = () => {
       <JobListView/>
     );
   }
-      
+
 }
 
 export default AppView;
