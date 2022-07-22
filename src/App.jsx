@@ -12,10 +12,10 @@ import AppHeader from './components/Header/App/AppHeader';
 
 function App() {
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     const dbRef = ref(FirebaseDatabase);
-    get(child(dbRef, '/jobs')).then(snapshot => {
+    get(child(dbRef, '/')).then(snapshot => {
       snapshot.forEach(childSnapshot => {
         const job = childSnapshot.val();
         dispatch(addJob(job));

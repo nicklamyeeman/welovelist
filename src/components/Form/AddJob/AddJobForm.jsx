@@ -5,6 +5,12 @@ const AddJobForm = (props) => {
   return (
     <div className="overflow-scroll h-80 relative p-6 flex-auto">
       <TextInput
+        name="companyName"
+        label="Company Name"
+        value={props.jobOffer.companyName}
+        onChange={props.handleChange}
+      />
+      <TextInput
         name="title"
         label="Title"
         value={props.jobOffer.title}
