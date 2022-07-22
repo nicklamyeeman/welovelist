@@ -1,4 +1,4 @@
-const CancelButton = (props) =>{
+const ValidateButton = (props) =>{
   return (
     <div>
       <button
@@ -12,4 +12,4 @@ const CancelButton = (props) =>{
   );
 }
 
-export default CancelButton;
+export default ValidateButton;
