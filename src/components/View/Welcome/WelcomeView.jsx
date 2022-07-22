@@ -1,27 +1,23 @@
 import { useDispatch } from "react-redux";
 import { setVisitor } from "../../../app/slices/visitorSlice";
 
-import WelcomeTitleText from "../../Text/WelcomeTitle/WelcomeTitleText";
-import VisitorTypeButton from "../../Button/VisitorType/VisitorTypeButton";
+import PrimaryButton from "../../Button/Primary/PrimaryButton";
 
 const WelcomeView = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="text-center">
-      <WelcomeTitleText/>
-      <div className="grid grid-cols-2">
-        <VisitorTypeButton
-          label="Company"
-          onClick={() => dispatch(setVisitor("company"))}
-        />
-        <VisitorTypeButton
-          label="Applicant"
-          onClick={() => dispatch(setVisitor("applicant"))}
-        />
-      </div>
+    <div className="grid grid-cols-2">
+     <PrimaryButton
+        label="Company"
+        onClick={() => dispatch(setVisitor("company"))}
+      />
+      <PrimaryButton
+        label="Applicant"
+        onClick={() => dispatch(setVisitor("applicant"))}
+      />
     </div>
-  )
+  );
 }
 
 export default WelcomeView;

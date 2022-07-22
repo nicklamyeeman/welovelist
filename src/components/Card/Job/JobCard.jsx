@@ -1,9 +1,13 @@
+import { useSelector } from "react-redux";
+
 import CompanyNameText from "../../Text/CompanyName/CompanyNameText";
 import JobDescriptionText from "../../Text/JobDescription/JobDescriptionText";
-import ViewMoreButton from "../../Button/ViewMore/ViewMoreButton";
-import ApplyButton from "../../Button/Apply/ApplyButton";
+import PrimaryButton from "../../Button/Primary/PrimaryButton";
+import SecondaryButton from "../../Button/Secondary/SecondaryButton";
 
 const JobCard = (props) => {
+  const { visitor } = useSelector(state => state.visitor);  
+
   return (
     <div className="p-4">
       <CompanyNameText
@@ -12,8 +16,16 @@ const JobCard = (props) => {
       <JobDescriptionText
         jobDescription={props.job.description}
       />
-      <ViewMoreButton/>
-      <ApplyButton/>
+      <SecondaryButton
+        label="View More..."  
+      />
+      {
+        visitor === "applicant" ? (
+          <PrimaryButton
+            label="Apply"
+          />
+        ) : null
+      }
     </div>
   );
 }
