@@ -7,7 +7,7 @@ import { addJob } from './app/slices/jobsSlice';
 import FirebaseDatabase from './app/firebase.config';
 import { ref, child, get } from "firebase/database";
 
-import AppView from './components/View/App/AppView';
+import AppPage from './components/Page/App/AppPage';
 import AppHeader from './components/Header/App/AppHeader';
 
 function App() {
@@ -28,9 +28,9 @@ function App() {
   , []);
 
   return (
-    <div className="">
+    <div className="App">
       <AppHeader/>
-      <AppView/>
+      <AppPage/>
    </div>
   );
 }
